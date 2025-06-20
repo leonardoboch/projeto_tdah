@@ -3,36 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Boas Práticas para TDAH em Sistemas de Informação</title>
+  <title>TDAH e Tecnologia no Trabalho: Perspectivas e Experiências</title>
+  <meta name="description" content="Guia para promover a inclusão de pessoas com TDAH no ambiente de trabalho, considerando desafios e estratégias com o uso de tecnologias assistivas e adaptativas.">
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f8fb;
-      color: #333;
+      background-color: #fdf8e4;
+      color: #333333;
       line-height: 1.6;
       padding: 20px;
     }
+
     h1, h2 {
-      color: #0a5275;
+      color: #ff7f00;
+      cursor: pointer;
     }
+
     .box {
       background-color: #ffffff;
-      border-left: 6px solid #0a5275;
+      border-left: 6px solid #ff7f00;
       margin: 20px 0;
       padding: 15px 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
+
     ul {
       list-style-type: square;
       padding-left: 20px;
+      display: none;
     }
+
     footer {
       margin-top: 40px;
       font-size: 0.9em;
       color: #777;
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th, table td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    table caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ff7f00;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .joinBtn {
+        width: 15em;
+        height: 3.5em;
+        background-color: #ff7f00;
+        border: 2px solid #ff7f00;
+        border-radius: 10px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+    }
+
+    .joinBtn:hover {
+        background-color: #e67e00; 
+        border-color: #e67e00; 
+    }
+
+    .joinBtn:focus {
+        outline: 3px solid #ff7f00; 
+    }
   </style>
+
+  <script>
+    function toggleList(id) {
+      const list = document.getElementById(id);
+      if (list.style.display === "none") {
+        list.style.display = "block";
+      } else {
+        list.style.display = "none";
+      }
+    }
+  </script>
+
 </head>
 <body>
 
@@ -40,53 +106,114 @@
   <p>Este guia visa apoiar o uso saudável e produtivo de sistemas da informação por pessoas com Transtorno de Déficit de Atenção com Hiperatividade (TDAH), promovendo acessibilidade, bem-estar e inclusão.</p>
 
   <div class="box">
-    <h2> Estratégias Individuais</h2>
-    <ul>
-      <li>Use listas de tarefas e aplicativos como Todoist ou Notion.</li>
-      <li>Adote técnicas como Pomodoro com apps como Forest.</li>
-      <li>Utilize alarmes, calendários e temporizadores visuais.</li>
-      <li>Crie ambientes com menos distrações (fone com cancelamento de ruído, espaço silencioso).</li>
-      <li>Prefira editores minimalistas e automações (ex: Zapier) para reduzir sobrecarga cognitiva.</li>
-      <li>Faça pausas programadas e pratique mindfulness.</li>
-      <li>Divida tarefas em blocos menores e comemore pequenas conquistas.</li>
+    <h2 onclick="toggleList('individual-strategies')" class="joinBtn">Estratégias Individuais</h2>
+    <ul id="individual-strategies">
+      <li>
+        <h3>Use listas de tarefas e aplicativos como Todoist ou Notion.</h3>
+        <p> Ferramentas como Todoist e Notion ajudam a organizar tarefas, mantendo uma visão clara do que precisa ser feito, o que é essencial para pessoas com TDAH, que podem se distrair facilmente ou ter dificuldades para organizar suas atividades.</p>
+      </li>
+      <li>
+        <h3>Adote técnicas como Pomodoro com apps como Forest.</h3>
+        <p> A técnica Pomodoro, associada a apps como Forest, ajuda a manter o foco ao dividir o trabalho em blocos de tempo, o que pode ser útil para quem tem dificuldade em manter atenção por períodos longos.</p>
+      </li>
+      <li>
+        <h3>Utilize alarmes, calendários e temporizadores visuais.</h3>
+        <p> Alarmes e temporizadores ajudam a criar uma rotina estruturada e a reduzir a procrastinação, fornecendo lembretes visuais e sonoros, essenciais para quem tem TDAH.</p>
+      </li>
+      <li>
+        <h3>Crie ambientes com menos distrações (fone com cancelamento de ruído, espaço silencioso).</h3>
+        <p> Ambientes tranquilos e sem distrações são fundamentais para melhorar a concentração de pessoas com TDAH, ajudando a reduzir a sobrecarga sensorial.</p>
+      </li>
+      <li>
+        <h3>Prefira editores minimalistas e automações (ex: Zapier) para reduzir sobrecarga cognitiva.</h3>
+        <p> A simplificação das interfaces e a automação de tarefas ajudam a reduzir o número de decisões que precisam ser tomadas, o que é benéfico para quem tem dificuldades com foco e sobrecarga cognitiva.</p>
+      </li>
+      <li>
+        <h3>Faça pausas programadas e pratique mindfulness.</h3>
+        <p> Pausas programadas e práticas de mindfulness são importantes para reduzir o estresse e melhorar a atenção, ajudando a manter o equilíbrio mental e emocional durante o trabalho.</p>
+      </li>
+      <li>
+        <h3> Divida tarefas em blocos menores e comemore pequenas conquistas.</h3>
+        <p> Quebrar tarefas em partes menores torna as atividades mais gerenciáveis e reduz a sensação de sobrecarga, ao mesmo tempo que as pequenas vitórias ajudam a manter a motivação.</p>
+      </li>
     </ul>
   </div>
 
   <div class="box">
-    <h2> Boas Práticas Organizacionais</h2>
-    <ul>
-      <li>Flexibilize horários e espaços de trabalho (ex: home office).</li>
-      <li>Ofereça diferentes formatos de comunicação: escrita, visual, oral.</li>
-      <li>Implemente feedback estruturado e reuniões curtas com objetivos claros.</li>
-      <li>Evite sobrecarga de informações e incentive pausas.</li>
-      <li>Adote ferramentas colaborativas que permitam organização visual (ex: Trello, Miro).</li>
-      <li>Permita o uso de tecnologias assistivas e apoio emocional.</li>
+    <h2 onclick="toggleList('organizational-strategies')" class="joinBtn">Boas Práticas Organizacionais</h2>
+    <ul id="organizational-strategies">
+      <li>
+        <h3>Flexibilize horários e espaços de trabalho (ex: home office).</h3>
+        <p> A flexibilidade no ambiente de trabalho, como o home office ou horários ajustáveis, pode ajudar a pessoa com TDAH a adaptar seu ambiente de forma que maximize seu desempenho e conforto.</p>
+      </li>
+      <li>
+        <h3>Ofereça diferentes formatos de comunicação: escrita, visual, oral.</h3>
+        <p> Permitir diferentes formas de comunicação pode ajudar os indivíduos com TDAH a entender melhor as informações e reduzir o risco de mal-entendidos ou frustração.</p>
+      </li>
+      <li>
+        <h3>Evite sobrecarga de informações e incentive pausas.</h3>
+        <p> Evitar a sobrecarga de informações permite que os funcionários se concentrem no que é realmente importante, e as pausas são essenciais para recarregar as energias e melhorar o foco.</p>
+      </li>
+      <li>
+        <h3>Adote ferramentas colaborativas que permitam organização visual (ex: Trello, Miro).</h3>
+        <p> Ferramentas visuais como Trello e Miro ajudam a organizar tarefas e fluxos de trabalho de maneira intuitiva, o que é especialmente útil para pessoas com TDAH que se beneficiam de representações gráficas.</p>
+      </li>
+      <li>
+        <h3>Permita o uso de tecnologias assistivas e apoio emocional.</h3>
+        <p> O uso de tecnologias assistivas, como leitores de tela e aplicativos de organização, juntamente com apoio emocional, pode melhorar o bem-estar e a produtividade de pessoas com TDAH.</p>
+      </li>
     </ul>
   </div>
 
   <div class="box">
-    <h2>Tecnologias Úteis</h2>
-    <ul>
-      <li>Figma, Notion, Trello, Clockify, Google Agenda, Anki</li>
-      <li>Temporizadores visuais, lembretes sonoros, fones com cancelamento de ruído</li>
-      <li>Extensões minimalistas para editores de texto/código</li>
-      <li>Softwares com suporte à acessibilidade (fonte ajustável, cores neutras)</li>
+    <h2 onclick="toggleList('useful-technologies')" class="joinBtn">Tecnologias Úteis</h2>
+    <ul id="useful-technologies">
+      <li>
+        <h3>Figma, Notion, Trello, Clockify, Google Agenda, Anki</h3>
+        <p> Ferramentas como estas ajudam na organização de tarefas e gerenciamento de tempo, essenciais para aqueles que têm dificuldades de concentração e gestão do tempo.</p>
+      </li>
+      <li>
+        <h3>Temporizadores visuais, lembretes sonoros, fones com cancelamento de ruído</h3>
+        <p> Ferramentas de lembretes visuais e sonoros, junto com fones que ajudam a reduzir o ruído, são ótimas para pessoas com TDAH, proporcionando foco e lembretes constantes.</p>
+      </li>
+      <li>
+        <h3>Extensões minimalistas para editores de texto/código</h3>
+        <p> Usar extensões minimalistas para editores de texto/código ajuda a reduzir distrações e a simplificar a interface, permitindo um ambiente de trabalho mais focado e produtivo.</p>
+      </li>
+      <li>
+        <h3>Softwares com suporte à acessibilidade (fonte ajustável, cores neutras)</h3>
+        <p> Softwares com ajustes de acessibilidade, como fontes ajustáveis e cores neutras, são cruciais para garantir uma experiência confortável para pessoas com dificuldades visuais ou sensibilidade sensorial.</p>
+      </li>
     </ul>
   </div>
 
   <div class="box">
-    <h2> Dicas de Acessibilidade</h2>
-    <ul>
-      <li>Evite interfaces com muitos estímulos visuais.</li>
-      <li>Use fontes legíveis e contraste equilibrado.</li>
-      <li>Ofereça modos escuros e opções de personalização de layout.</li>
+    <h2 onclick="toggleList('accessibility-tips')" class="joinBtn">Dicas de Acessibilidade</h2>
+    <ul id="accessibility-tips">
+      <li>
+        <h3>Evite interfaces com muitos estímulos visuais.</h3>
+        <p> Interfaces simples e sem excessos visuais ajudam a manter o foco do usuário, evitando distrações que podem aumentar a dificuldade de concentração para pessoas com TDAH.</p>
+      </li>
+      <li>
+        <h3>Use fontes legíveis e contraste equilibrado.</h3>
+        <p> Usar fontes legíveis e garantir um bom contraste entre texto e fundo é essencial para a legibilidade, especialmente para usuários com dificuldades de visão ou TDAH.</p>
+      </li>
+      <li>
+        <h3>Ofereça modos escuros e opções de personalização de layout.</h3>
+        <p> O modo escuro pode ser útil para reduzir a tensão ocular e facilitar a leitura em ambientes com pouca luz, além de permitir uma personalização que torna o ambiente de trabalho mais confortável.</p>
+      </li>
     </ul>
   </div>
 
   <footer>
-    Desenvolvido com base em <i>TDAH e Tecnologia no Trabalho: Perspectivas e Experiências</i> (UTFPR, 2025).
+    Desenvolvido com base em <i>TDAH e Tecnologia no Trabalho: Perspectivas e Experiências</i> (UTFPR, 2025). Este guia foi feito respeitando as diretrizes de acessibilidade e usabilidade, de acordo com WCAG 2.1.
+    <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          <img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+        </a><br />
+        Esta obra está licenciada com uma Licença <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Atribuição 4.0 Internacional</a>.
+      </p>
   </footer>
 
 </body>
 </html>
-
