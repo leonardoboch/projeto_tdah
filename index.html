@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Boas Práticas para TDAH</title>
   <meta name="description" content="Guia para promover a inclusão de pessoas com TDAH no ambiente de trabalho, considerando desafios e estratégias com o uso de tecnologias assistivas e adaptativas.">
-  <!--
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic/alternatives/OpenDyslexicAlta-Regular.otf" />
-   -->
   <style>
     :root {
       --bg-light: #FFF8F0;
@@ -20,9 +17,9 @@
     }
 
     @font-face {
-       font-family: 'OpenDyslexic';
-       src: url('./fonts/OpenDyslexic-Regular.woff') format('woff'),
-            url('./fonts/OpenDyslexic-Regular.otf') format('opentype');
+      font-family: 'OpenDyslexic';
+      src: url('./fonts/OpenDyslexic-Regular.woff') format('woff'),
+           url('./fonts/OpenDyslexic-Regular.otf') format('opentype');
     }
 
     body {
@@ -31,8 +28,6 @@
       color: var(--text-light);
       margin: 0;
       padding: 0;
-      transition: background 0.3s, color 0.3s;
-      /* Alterações para o footer fixo */
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -43,6 +38,23 @@
       color: var(--text-dark);
     }
 
+    a {
+      color: inherit;
+    }
+
+    a.skip-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+    }
+    a.skip-link:focus {
+      top: 0;
+    }
+
     header {
       background-color: var(--accent);
       color: white;
@@ -51,10 +63,10 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 1500px;
+      width: 100%;
       margin: auto;
       padding: 2rem;
-      /* Alteração para o footer fixo */
       flex-grow: 1;
     }
 
@@ -63,7 +75,6 @@
       color: var(--accent-dark);
     }
 
-    /* Alteração para o título do header */
     header h1 {
       color: white;
     }
@@ -117,7 +128,6 @@
       outline: 2px solid yellow;
     }
 
-    /* Tabs */
     .tabs {
       margin: 2rem 0 1rem;
     }
@@ -138,6 +148,10 @@
       color: #000;
     }
 
+    .tabs button:focus {
+      outline: 2px dashed yellow;
+    }
+
     .section {
       display: none;
     }
@@ -146,54 +160,41 @@
       display: block;
     }
 
-    /* Cat - Categories */
     .cat {
-        display: flex; 
-        align-items: center;
+      display: flex;
+      align-items: center;
     }
-    .cat h3{
-        margin-bottom: 0;
+    .cat h3 {
+      margin-bottom: 0;
+    }
+    * {
+      font-family: 'OpenDyslexic', Arial, sans-serif;
     }
 
-    a {
-      color: inherit;
-    }
   </style>
 </head>
-
 <body role="document">
-  <button class="toggle-dark" aria-label="Alternar modo escuro" onclick="document.body.classList.toggle('dark-mode')">
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <button class="toggle-dark" aria-label="Alternar modo escuro" onclick="toggleDarkMode()">
     Alternar modo escuro
   </button>
 
   <header role="banner">
-    <img src="./figures/borboleta_tdah.png" alt="Símbolo associado ao TDAH: a borboleta arco-íris" style="width: 200px; height: auto;">
+    <img src="./figures/borboleta_tdah.png" alt="Símbolo associado ao TDAH: a borboleta arco-íris" style="width: 200px; height: auto;" role="presentation" aria-hidden="true">
     <h1>Boas Práticas para Pessoas com TDAH</h1>
   </header>
 
-  <main role="main">
-    <h2>Sobre o projeto</h2>
-    <p>A elaboração deste Recurso Educacional Aberto (REA) faz parte de um projeto desenvolvido na disciplina de Computação e Sociedade do curso de Sistemas de Informação da UTFPR, e contou com uma etapa anterior envolvendo a pesquisa de literaturas relacionadas, diálogo com a comunidade envolvida e escrita de um artigo</p>
-    <p>Este guia visual foi desenvolvido com base em literatura científica, entrevistas e relatos de pessoas com TDAH. Ele tem como objetivo reunir estratégias práticas para melhorar o dia a dia profissional de pessoas neurodivergentes, bem como sensibilizar organizações para a criação de ambientes mais inclusivos. As sugestões apresentadas aqui são flexíveis e podem ser adaptadas às necessidades individuais. A diversidade de experiências é parte essencial da vivência com o TDAH — não há uma fórmula única</p>
-    <p>Este recurso utiliza a fonte OpenDyslexic (https://opendyslexic.org/), uma fonte elaborada para combater alguns sintomas comuns identificados por pessoas com dislexia quando realizando leituras</p>
-    <p>As leituras realizadas estão presentes na seção de “Referências e Leituras”. O artigo escrito que fundamentou esse recurso “TDAH e Tecnologias no Trabalho: Perspectivas e Experiências” está disponível aqui (link)</p>
-    <h2>Você sabia?</h2>
-    <p>O Transtorno do Déficit de Atenção com Hiperatividade (TDAH) é comumente caracterizado por padrões de desatenção e hiperatividade, porém seus sintomas podem ir além disso afetando a memória, processos cognitivos, como os de planejamento, e aspectos cognitivos emocionais e afetivos, como baixa tolerância a frustrações e mudanças de humor</p>
-    <p>O símbolo associado ao TDAH é a borboleta arco-íris, com as diversas cores representando as experiências diversas das pessoas com neurodivergências. Entre as características em comum entre pessoas com TDAH e borboletas que levaram a associação destas como símbolo, estão aspectos como a energia e movimentos rápidos, considerando a energia no movimento das asas das borboletas e a energia encontrada nas pessoas com TDAH, a sensação de singularidade, uma vez que cada borboleta tem um padrão e cores diferentes assim como as pessoas com TDAH possuem experiências diferentes uma das outras, e o potencial para transformação, uma vez que a borboleta passa pela sua metamorfose da mesma maneira como as pessoas com TDAH irão passar por períodos de crescimento e descoberta antes de emergirem com seu próprio e único desenvolvimento.</p>
-    <p>A cor associada ao TDAH é o laranja, representando energia e calor, sendo que o Outubro Laranja é o mês de conscientização sobre o TDAH, com o objetivo de informar, dar suporte e combater estigmas existentes.</p>
+  <main role="main" id="conteudo">
+    <h1 class="sr-only">Guia acessível de boas práticas para TDAH</h1>
 
-    <div class="tabs">
-      <button onclick="showSection('individual')" class="active">Dicas Individuais</button>
-      <button onclick="showSection('organizacional')">Dicas Organizacionais</button>
+    <div class="tabs" role="tablist">
+      <button onclick="showSection('individual', event)" class="active" aria-selected="true" aria-expanded="true" role="tab">Estratégias Individuais</button>
+      <button onclick="showSection('organizacional', event)" aria-selected="false" aria-expanded="false" role="tab">Estratégias Organizacionais</button>
     </div>
 
-    <section id="individual" class="section active box">
-      <!--
-      <h2>🧠 Estratégias Individuais</h2>
-      -->
-
+    <section id="individual" class="section active box" role="tabpanel"  aria-labelledby="Dicas Individuais">
       <h2>Estratégias Individuais</h2>
-
       <div class="cat">
         <img src="./figures/ma.png" alt="Ícone do meio ambiente" style="width: 35px; height: 35px;">
         <h3>Compatibilidade Pessoa-Ambiente</h3>
@@ -355,7 +356,8 @@
         </ul>
     </section>
 
-    <section id="organizacional" class="section box">
+    <section id="organizacional" class="section box" role="tabpanel" aria-labelledby="Dicas Organizacionais">
+      <h2>Estratégias Organizacionais</h2>
       <div class="cat">
         <img src="./figures/organizacional.png" alt="Ícone de niveis organizacionais" style="width: 35px; height: 35px;">
         <h3>Estratégias em Nível Organizacional </h3>
@@ -383,48 +385,6 @@
         <p>A utilização de design participativo, prática de incluir as pessoas relacionadas no processo de design, para a elaboração de ferramentas, materiais e políticas da organização.</p>
       </ul>
     </section>
-
-  <h2>Referências e Leituras</h2>
-
-  <ul>
-    <li>
-      <strong>O que é TDAH?</strong> — Autores: Associação Brasileira do Déficit de Atenção (ABDA) — Idioma: Português —
-      <a href="https://tdah.org.br/sobre-tdah/o-que-e-tdah/" target="_blank">Acesse aqui</a>
-    </li>
-
-    <li>
-      <strong>Strengths and challenges to embrace attention-deficit/hyperactivity disorder in employment—A systematic review</strong> —
-      Autores: Adèle Hotte-Meunier et al. — Idioma: Inglês —
-      <a href="https://journals.sagepub.com/doi/10.1177/27546330241287655" target="_blank">Acesse aqui</a>
-    </li>
-
-    <li>
-      <strong>Challenges, Strengths, and Strategies of Software Engineers with ADHD: A Case Study</strong> —
-      Autores: Grischa Liebel, Noah Langlois e Kiev Gama — Idioma: Inglês —
-      <a href="https://arxiv.org/abs/2312.05029" target="_blank">Acesse aqui</a>
-    </li>
-
-    <li>
-      <strong>Exploring the Experiences of Women with ADHD in Professional Settings: A Qualitative Study</strong> —
-      Autores: Arezou Moradi e Zahra Rootivand Ghiasvand — Idioma: Inglês —
-      <a href="https://journals.kmanpub.com/index.php/psychnexus/article/view/3628" target="_blank">Acesse aqui</a>,
-      <a href="https://journals.kmanpub.com/index.php/psychnexus/article/view/3628/5802" target="_blank">Versão completa</a>
-    </li>
-
-    <li>
-      <strong>“Get Me In The Groove”: A Mixed Methods Study on Supporting ADHD Professional Programmers</strong> —
-      Autores: Kaia Newman et al. — Idioma: Inglês —
-      <a href="https://kaianew.github.io/GetMeInTheGroove.pdf" target="_blank">Acesse aqui</a>
-    </li>
-
-    <li>
-      <strong>What is the ADHD Symbol?</strong> — Autor: Richard Purcell — Idioma: Inglês —
-      <a href="https://carescribe.io/blog/adhd-symbol/" target="_blank">Acesse aqui</a>
-    </li>
-  </ul>
-
-
-
   </main>
 
   <footer role="contentinfo">
@@ -438,18 +398,35 @@
   </footer>
 
   <script>
-    // Alternância entre seções
-    function showSection(sectionId) {
-      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-      document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
-      document.getElementById(sectionId).classList.add('active');
-      event.target.classList.add('active');
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      const darkModeOn = body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', darkModeOn);
     }
 
-    // Corrigido: Aplicar modo escuro automaticamente se o sistema preferir
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) {
+    function showSection(sectionId, event) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.tabs button').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+      document.getElementById(sectionId).classList.add('active');
+      if (event && event.target) {
+        event.target.classList.add('active');
+        event.target.setAttribute('aria-selected', 'true');
+        event.target.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // Persistir modo escuro conforme preferência salva
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'true') {
       document.body.classList.add('dark-mode');
+    } else if (!savedMode) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (prefersDark) document.body.classList.add('dark-mode');
     }
   </script>
 </body>
