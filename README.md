@@ -1,4 +1,4 @@
-# projeto_tdah
+# Computação e Sociedade - TDAH e Tecnologias no Trabalho: Perspectivas e Experiencias
 
 A elaboração deste Recurso Educacional Aberto (REA) faz parte de um projeto desenvolvido na disciplina de Computação e Sociedade do curso de Sistemas de Informação da UTFPR, e contou com uma etapa anterior envolvendo a pesquisa de literaturas relacionadas, diálogo com a comunidade envolvida e escrita de um artigo. 
 
