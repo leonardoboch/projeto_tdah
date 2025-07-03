@@ -7,3 +7,5 @@ Este guia visual foi desenvolvido com base em literatura científica, entrevista
 Este recurso utiliza a fonte OpenDyslexic (https://opendyslexic.org/), uma fonte elaborada para combater alguns sintomas comuns identificados por pessoas com dislexia quando realizando leituras.
 
 As leituras realizadas estão presentes na seção de “Referências e Leituras”. O artigo escrito que fundamentou esse recurso “TDAH e Tecnologia no Trabalho: Perspectivas e Experiências” está disponível aqui.
+
+O website desenvolvido pode ser acessado através do sequinte link: https://camilavi.github.io/CompSociedade_TDAH/ 
